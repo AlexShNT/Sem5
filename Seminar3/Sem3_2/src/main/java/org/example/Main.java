@@ -20,7 +20,7 @@ public class Main {
 
         List<Student> stdGroup1 = new ArrayList<>(asList(std1, std2, std3, std4, std5));
         List<Student> stdGroup2 = new ArrayList<>(asList(std1, std2, std3, std4, std5, std6));
-        List<Student> stdGroup3 = new ArrayList<>(asList(std1, std3, std4, std5, std6));
+        List<Student> stdGroup3 = new ArrayList<>(asList(std1, std3, std4, std5));
 
         for (Student st: stdGroup1) {
             System.out.println(st);
@@ -45,9 +45,13 @@ public class Main {
         StudyGroup studyGroup2 = new StudyGroup(stdGroup2);
         StreamGroup streamGroups2 = new StreamGroup(Collections.singletonList(studyGroup2));
 
+        StudyGroup studyGroup3 = new StudyGroup(stdGroup3);
+        StreamGroup streamGroups3 = new StreamGroup(Collections.singletonList(studyGroup3));
+
         List<StreamGroup> streamGroups = new ArrayList<>();
         streamGroups.add(streamGroups1);
         streamGroups.add(streamGroups2);
+        streamGroups.add(streamGroups3);
 
         System.out.println(streamGroups);
 

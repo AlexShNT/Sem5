@@ -1,33 +1,36 @@
 package org.example;
 
-import java.util.HashMap;
-
 public class HotDrink extends Drink{
-    private int temperatura;
+    private int temperature;
     Drink hD = new Drink();
 
-
+    public HotDrink(int temperature, String name, double coast) {
+        hD.setName(name);
+        hD.setCoast(coast);
+        this.temperature = temperature;
+    }
 
     public void setHotDrink(int temperatura, String name, double coast ) {
         this.hD.name = name;
         this.hD.coast = coast;
-        this.temperatura = temperatura;
+        this.temperature = temperatura;
     }
 
     public String getName(){
         return this.hD.name;
     }
 
-    public int getTemperatura() {
-        return temperatura;
+    public int getTemperature() {
+        return temperature;
     }
 
     @Override
     public String toString() {
         return "HotDrink{" +
-                "temperatura=" + this.temperatura +
+                "temperature=" + this.temperature +
                 ", name=" +  this.hD.name+
                 ", coast=" + this.hD.coast +
                 '}';
     }
 }
+

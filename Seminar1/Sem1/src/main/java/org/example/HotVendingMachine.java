@@ -2,9 +2,6 @@ package org.example;
 
 import java.util.HashMap;
 
-//Создать класс ГорячихНапитковАвтомат реализующий интерфейс ТорговыйАвтомат и реализовать перегруженный метод
-// getProduct(int name, int volume, int temperature), выдающий продукт соответствующий имени, объёму и температуре
-
 public class HotVendingMachine implements VendingMachine{
     private String name;
     private int volume;
@@ -55,20 +52,20 @@ public class HotVendingMachine implements VendingMachine{
                 String tHD =   goods.get(name + temperature).hDM.toString();
                 setVal(name+temperature, ost);
 
-                return "выдали: " + tHD +
-                        " осталось:" + Integer.toString(ost);
+                return "пїЅпїЅпїЅпїЅпїЅпїЅ: " + tHD +
+                        " пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:" + Integer.toString(ost);
             } else{
                 if (this.goods.get(name + temperature).value == 0)
-                    return "Этот напиток закончился";
+                    return "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
                 else
-                    return "Нет такого количества напитка." +
-                            name + " c температурой:" + temperature +
-                            " осталось всего: " +
+                    return "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ." +
+                            name + " c пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:" + temperature +
+                            " пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: " +
                             this.goods.get(name + temperature).value;
             }
         }
         else{
-            return "Нет такого напитка " + name+temperature;
+            return "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " + name+temperature;
         }
 
     }
